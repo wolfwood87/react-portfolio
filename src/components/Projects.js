@@ -3,7 +3,6 @@ import Carousel from "@brainhubeu/react-carousel"
 import "@brainhubeu/react-carousel/lib/style.css";
 import { makeStyles, useTheme } from '@material-ui/styles';
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import projectPic from "../images/code.jpg"
 import {projectList} from './assets/projectList.js';
 import code from "../images/code.jpg"
 import ReactFontFace from 'react-font-face'
@@ -217,8 +216,8 @@ function Projects(props) {
                 key={i}
                 className={classes.placeholderImage}
               >
-                {cl.image ? <img src={cl.image} className={classes.projectImage}/> :
-                <img src={code} className={classes.backgroundImage}/>}
+                {cl.image ? <img src={cl.image} alt="project"className={classes.projectImage}/> :
+                <img src={code} alt="background" className={classes.backgroundImage}/>}
               </div>
             ))}
           </Carousel>

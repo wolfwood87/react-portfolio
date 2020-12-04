@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import { makeStyles, useTheme } from '@material-ui/styles';
 import { Link } from "react-router-dom";
-import { AppBar, Toolbar, Button, useScrollTrigger, Tabs, Tab} from "@material-ui/core"
+import { AppBar, Toolbar, useScrollTrigger, Tabs, Tab} from "@material-ui/core"
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer"
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import IconButton from "@material-ui/core/IconButton"
@@ -76,8 +76,6 @@ const useStyles = makeStyles(theme => ({
 }))
 export default function Header(props) {
     const [value, setValue] = useState(0)
-    const [color, setColor] = useState("transparent")
-    const [moving, setMoving] = useState(false)
     const [openDrawer, setOpenDrawer] = useState(false)
 
     const theme = useTheme();
