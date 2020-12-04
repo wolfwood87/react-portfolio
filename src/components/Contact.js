@@ -151,25 +151,25 @@ function Contact(props) {
                 <p className={classes.descText}>I would love to hear from you!</p>
             </div>
             <form className={classes.fieldContainer} onSubmit={handleSubmit}>
-                    <div class="field half" className={classes.field}>
-                        <label for="name">Name</label>
+                    <div className={classes.field}>
+                        <label htmlFor="name">Name</label>
                         <input type="text" name="name" id="name" value={formData.name} onChange={handleChange}/>
                     </div>
-                    <div class="field half" className={classes.field}>
-                        <label for="email">Email</label>
+                    <div className={classes.field}>
+                        <label htmlFor="email">Email</label>
                         <input type="text" name="email" id="email" value={formData.email} onChange={handleChange}/>
                     </div>
-                    <div class="field" className={classes.field}>
-                        <label for="message">Message</label>
+                    <div className={classes.field}>
+                        <label htmlFor="message">Message</label>
                         <textarea name="message" id="message" rows="4" value={formData.message} onChange={handleChange}></textarea>
                     </div>
-                <input type="submit" value="Send Message" class="primary" className={matches ? classes.mobileSubmitButton : classes.submitButton}/>      
+                <input type="submit" value="Send Message"  className={matches ? classes.mobileSubmitButton : classes.submitButton}/>      
             </form>
             <div className={classes.linksContainer}>
-                <a href="https://www.linkedin.com/in/derek-glynn/" class="icon brands fa-linkedin" className={classes.links}>
+                <a href="https://www.linkedin.com/in/derek-glynn/" className={classes.links}>
                     <LinkedInIcon fontSize="large"/>
                 </a>
-                <a href="https://github.com/wolfwood87/" class="icon brands fa-github" className={classes.links}>
+                <a href="https://github.com/wolfwood87/" className={classes.links}>
                         <GitHubIcon fontSize="large"/>
                 </a>
             </div>

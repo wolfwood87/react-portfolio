@@ -101,7 +101,7 @@ function About(props) {
         <div className={matches ? classes.mobileHomeContainer : classes.homeContainer}>
 
                 
-                <span class="image main"><img src={aboutPic} alt="beach-picture" className={matches ? classes.mobileImage : classes.image} /></span>
+                <span><img src={aboutPic} alt="beach" className={matches ? classes.mobileImage : classes.image} /></span>
  
             <div className={matches ? classes.mobileTextContainer : classes.textContainer}>
                 <h2 className={matches ? classes.mobileMajor : classes.major}>About</h2>

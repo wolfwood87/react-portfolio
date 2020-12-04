@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from "react"
+import React, {useEffect, useRef} from "react"
 import { makeStyles } from '@material-ui/styles';
 import Home from "./Home.js"
 import About from "./About.js"
@@ -97,20 +97,21 @@ function ScrollTop(props) {
   }
 
 export default function Display(props) {
-    const [position, setPosition] = useState({0:-1, 1:0, 2:1})
-    const [slideIndex, setSlideIndex] = useState({0: 0, 1:1, 2:2})
     const homeRef = useRef();
     const aboutRef = useRef();
     const projectRef = useRef();
     const contactRef = useRef();
-    const scrollHome = () => homeRef.current.scrollIntoView({ behavior: "smooth" })
-    const scrollAbout = () => aboutRef.current.scrollIntoView({ behavior: "smooth" })
-    const scrollContact = () => contactRef.current.scrollIntoView({ behavior: "smooth" })
-    const scrollProject = () => projectRef.current.scrollIntoView({ behavior: "smooth" })
+    const scrollHome = () => {
+        homeRef.current.scrollIntoView({ behavior: "smooth" })}
+    const scrollAbout = () => {
+        aboutRef.current.scrollIntoView({ behavior: "smooth" })}
+    const scrollContact = () => {
+        contactRef.current.scrollIntoView({ behavior: "smooth" })}
+    const scrollProject = () => {
+        projectRef.current.scrollIntoView({ behavior: "smooth" })}
     
 
     const classes = useStyles()
-    const [display, setDisplay] = useState(<Home />)
 
     useEffect(() => {
         switch(window.location.pathname) {
@@ -129,10 +130,7 @@ export default function Display(props) {
             default:
                 break
         }
-    }, [window.location.pathname])
-    useEffect(() => {
-        console.log("Hi")
-    }, [slideIndex])
+    })
     return (
         <div className={classes.displayContainer}>
             <div className={classes.container} ref={homeRef} id="back-to-top-anchor">
