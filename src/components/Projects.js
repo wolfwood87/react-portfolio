@@ -130,6 +130,9 @@ const useStyles = makeStyles(theme => ({
       borderRadius: "3px 0 0 3px",
       userSelect: "none",
     },
+    mobileArrow: {
+      display: "none"
+    },
     title: {
       color: "white",
       fontFamily: "wickedGrit"
@@ -203,11 +206,11 @@ function Projects(props) {
               }
             }}
             arrowLeft={
-              <button className={classes.prev} data-testid="new-left">
+              <button className={matches ? classes.mobileArrow : classes.prev} data-testid="new-left">
                 &#10094;
               </button>
             }
-            arrowRight={<button className={classes.next}>&#10095;</button>}
+            arrowRight={<button className={matches ? classes.mobileArrow : classes.next}>&#10095;</button>}
             addArrowClickHandler
             infinite
           >
